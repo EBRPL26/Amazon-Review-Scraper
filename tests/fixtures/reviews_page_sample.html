@@ -1,0 +1,165 @@
+<!doctype html>
+<!--
+  SYNTHETIC FIXTURE. Hand-written to mirror the structure of Amazon's customer-reviews
+  page markup (data-hook attributes, pagination bar, nav greeting). Product, people and
+  review text are fictional. Replace/augment with a real saved page (see README,
+  "Refreshing the test fixture") to catch live selector changes.
+-->
+<html lang="en-in">
+<head><meta charset="utf-8"><title>Amazon.in:Customer reviews: Test Storage Box (Pack of 3)</title></head>
+<body>
+<header id="navbar">
+  <a id="nav-logo-sprites" href="/">Amazon.in</a>
+  <a id="nav-link-accountList" href="/gp/css/homepage.html">
+    <span id="nav-link-accountList-nav-line-1" class="nav-line-1">Hello, Test User</span>
+    <span class="nav-line-2">Account &amp; Lists</span>
+  </a>
+</header>
+
+<div id="cm_cr-product_info">
+  <h1><a data-hook="product-link" href="/dp/B000TEST01">Test Storage Box (Pack of 3)</a></h1>
+  <span data-hook="rating-out-of-text">4.1 out of 5</span>
+</div>
+<div data-hook="cr-filter-info-review-rating-count" class="a-row a-spacing-base a-size-base">
+  1,234 total ratings, 210 with reviews
+</div>
+
+<div id="cm_cr-review_list" class="a-section a-spacing-none review-views celwidget">
+<ul role="list">
+
+<!-- 1: classic layout, variant strip, verified, image, "One person" -->
+<li data-hook="review" class="review aok-relative" id="R1TESTAAAA0001">
+ <div id="customer_review-R1TESTAAAA0001" class="a-section celwidget">
+  <div data-hook="genome-widget" class="a-row a-spacing-mini">
+   <a href="/gp/profile/amzn1.account.TEST1/ref=cm_cr_arp_d_gw_btm" class="a-profile">
+    <div class="a-profile-avatar-wrapper"><img src="data:," alt=""></div>
+    <div class="a-profile-content"><span class="a-profile-name">Asha R.</span></div>
+   </a>
+  </div>
+  <div class="a-row">
+   <a class="a-link-normal" title="4.0 out of 5 stars" href="/gp/customer-reviews/R1TESTAAAA0001/ref=cm_cr_arp_d_rvw_ttl?ie=UTF8&amp;ASIN=B000TEST01">
+    <i data-hook="review-star-rating" class="a-icon a-icon-star a-star-4 review-rating"><span class="a-icon-alt">4.0 out of 5 stars</span></i>
+   </a>
+   <span class="a-letter-space"></span>
+   <a data-hook="review-title" class="a-size-base a-link-normal review-title a-color-base review-title-content a-text-bold" href="/gp/customer-reviews/R1TESTAAAA0001/ref=cm_cr_arp_d_rvw_ttl?ie=UTF8&amp;ASIN=B000TEST01">
+    <span>Sturdy boxes, lid is a bit tight</span>
+   </a>
+  </div>
+  <span data-hook="review-date" class="a-size-base a-color-secondary review-date">Reviewed in India on 21 October 2026</span>
+  <div class="a-row a-spacing-mini review-data review-format-strip">
+   <a data-hook="format-strip" class="a-size-mini a-link-normal a-color-secondary" href="/product-reviews/B000TEST01/?formatType=current_format">Colour: Beige<i class="a-icon a-icon-text-separator" role="img" aria-label="|"></i>Size: Large (Pack of 3)</a>
+   <i class="a-icon a-icon-text-separator" role="img" aria-label="|"></i>
+   <a href="/reviews?verified=1"><span data-hook="avp-badge" class="a-size-mini a-color-state a-text-bold">Verified Purchase</span></a>
+  </div>
+  <div class="a-row a-spacing-small review-data">
+   <span data-hook="review-body" class="a-size-base review-text review-text-content">
+    <span>Good thick cardboard and the handles are strong.<br>The lid needs a firm push to close.</span>
+   </span>
+  </div>
+  <div class="review-image-tile-section">
+   <img alt="Customer image" src="data:," data-hook="review-image-tile" class="review-image-tile">
+  </div>
+  <div class="a-row review-comments">
+   <span data-hook="helpful-vote-statement" class="a-size-base a-color-tertiary cr-vote-text">One person found this helpful</span>
+  </div>
+ </div>
+</li>
+
+<!-- 2: newer layout (stars nested inside the title link), video, "12 people", not verified -->
+<li data-hook="review" class="review aok-relative" id="R2TESTBBBB0002">
+ <div id="customer_review-R2TESTBBBB0002" class="a-section celwidget">
+  <div data-hook="genome-widget" class="a-row a-spacing-mini">
+   <a href="/gp/profile/amzn1.account.TEST2" class="a-profile">
+    <div class="a-profile-content"><span class="a-profile-name">Vikram</span></div>
+   </a>
+  </div>
+  <div class="a-row">
+   <a data-hook="review-title" class="a-size-base a-link-normal review-title a-color-base review-title-content a-text-bold" href="/gp/customer-reviews/R2TESTBBBB0002/ref=cm_cr_arp_d_rvw_ttl?ie=UTF8&amp;ASIN=B000TEST01">
+    <i data-hook="review-star-rating" class="a-icon a-icon-star a-star-2 review-rating"><span class="a-icon-alt">2.0 out of 5 stars</span></i>
+    <span class="a-letter-space"></span>
+    <span>Arrived crushed</span>
+   </a>
+  </div>
+  <span data-hook="review-date" class="a-size-base a-color-secondary review-date">Reviewed in India on 18 October 2026</span>
+  <div class="a-row a-spacing-small review-data">
+   <span data-hook="review-body" class="a-size-base review-text review-text-content">
+    <div id="video-block-R2TESTBBBB0002" class="a-section a-spacing-small a-spacing-top-mini video-block"></div>
+    <input type="hidden" name="" value="https://example.invalid/video.mp4" class="video-url">
+    <span>Two of the three boxes came dented. Packaging was too thin.</span>
+   </span>
+  </div>
+  <div class="a-row review-comments">
+   <span data-hook="helpful-vote-statement" class="a-size-base a-color-tertiary cr-vote-text">12 people found this helpful</span>
+  </div>
+ </div>
+</li>
+
+<!-- 3: review from another country (cmps rating, original-content spans, US date format) -->
+<div data-hook="review" class="a-section review aok-relative" id="R3TESTCCCC0003">
+ <div id="customer_review_foreign-R3TESTCCCC0003" class="a-section celwidget">
+  <div class="a-row"><span class="a-profile-name">J. Miller</span></div>
+  <div class="a-row">
+   <i data-hook="cmps-review-star-rating" class="a-icon a-icon-star a-star-5 review-rating"><span class="a-icon-alt">5.0 out of 5 stars</span></i>
+   <span class="a-letter-space"></span>
+   <span data-hook="review-title" class="a-size-base review-title a-color-base review-title-content a-text-bold"><span class="cr-original-review-content">Perfect for my closet</span></span>
+  </div>
+  <span data-hook="review-date" class="a-size-base a-color-secondary review-date">Reviewed in the United States on October 15, 2026</span>
+  <div class="a-row a-spacing-mini review-data review-format-strip"><span data-hook="format-strip-linkless" class="a-size-mini a-color-secondary">Color: Grey</span>
+   <span data-hook="avp-badge-linkless" class="a-size-mini a-color-state a-text-bold">Verified Purchase</span></div>
+  <div class="a-row a-spacing-small review-data">
+   <span data-hook="review-body" class="a-size-base review-text review-text-content"><span class="cr-original-review-content">Exactly as described.</span></span>
+  </div>
+ </div>
+</div>
+
+<!-- 4: Hindi + rupee text, "Read more" control, large vote count -->
+<li data-hook="review" class="review aok-relative" id="R4TESTDDDD0004">
+ <div id="customer_review-R4TESTDDDD0004" class="a-section celwidget">
+  <div class="a-row"><a class="a-profile" href="#"><div class="a-profile-content"><span class="a-profile-name">Priya S</span></div></a></div>
+  <div class="a-row">
+   <a class="a-link-normal" title="5.0 out of 5 stars" href="/gp/customer-reviews/R4TESTDDDD0004/"><i data-hook="review-star-rating" class="a-icon a-icon-star a-star-5 review-rating"><span class="a-icon-alt">5.0 out of 5 stars</span></i></a>
+   <a data-hook="review-title" class="review-title" href="/gp/customer-reviews/R4TESTDDDD0004/"><span>बहुत बढ़िया</span></a>
+  </div>
+  <span data-hook="review-date" class="review-date">Reviewed in India on 9 October 2026</span>
+  <div class="a-row review-data"><a href="#"><span data-hook="avp-badge" class="a-size-mini a-color-state a-text-bold">Verified Purchase</span></a></div>
+  <div class="a-row a-spacing-small review-data">
+   <span data-hook="review-body" class="a-size-base review-text review-text-content">
+    <span>Worth ₹499. बहुत अच्छा सामान है।</span>
+   </span>
+   <div data-hook="expand-collapse-read-more-less" class="a-row"><a href="#">Read more</a></div>
+  </div>
+  <div class="a-row review-comments">
+   <span data-hook="helpful-vote-statement" class="a-size-base a-color-tertiary cr-vote-text">1,024 people found this helpful</span>
+  </div>
+ </div>
+</li>
+
+<!-- 5: minimal review: no votes, no variant, no badge -->
+<li data-hook="review" class="review aok-relative" id="R5TESTEEEE0005">
+ <div id="customer_review-R5TESTEEEE0005" class="a-section celwidget">
+  <div class="a-row"><span class="a-profile-name">Amazon Customer</span></div>
+  <div class="a-row">
+   <i data-hook="review-star-rating" class="a-icon a-icon-star a-star-3 review-rating"><span class="a-icon-alt">3.0 out of 5 stars</span></i>
+   <a data-hook="review-title" class="review-title" href="/gp/customer-reviews/R5TESTEEEE0005/"><span>Okay</span></a>
+  </div>
+  <span data-hook="review-date" class="review-date">Reviewed in India on 2 October 2026</span>
+  <span data-hook="review-body" class="review-text"><span>Does the job.</span></span>
+ </div>
+</li>
+
+<!-- duplicate card of review 1 (Amazon sometimes repeats a review in another widget) -->
+<li data-hook="review" class="review aok-relative" id="R1TESTAAAA0001">
+ <span data-hook="review-date">Reviewed in India on 21 October 2026</span>
+</li>
+
+</ul>
+</div>
+
+<div id="cm_cr-pagination_bar" data-hook="pagination-bar">
+ <ul class="a-pagination">
+  <li class="a-disabled">&larr;Previous page</li>
+  <li class="a-last"><a href="/product-reviews/B000TEST01/ref=cm_cr_arp_d_paging_btm_next_2?ie=UTF8&amp;reviewerType=all_reviews&amp;sortBy=recent&amp;pageNumber=2">Next page&rarr;</a></li>
+ </ul>
+</div>
+</body>
+</html>

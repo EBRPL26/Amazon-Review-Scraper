@@ -1,0 +1,16 @@
+# Login session / credentials -- never commit
+.auth/
+
+# Outputs
+reviews.db
+reviews.db-journal
+reviews_latest.csv
+exports/
+probe/
+scraper.log*
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/

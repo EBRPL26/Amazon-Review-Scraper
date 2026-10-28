@@ -1,0 +1,40 @@
+# Amazon review scraper settings. CLI flags override these.
+
+marketplace: amazon.in
+
+# ASINs to monitor. Also read from asins_file (one per line). --asin / --asins-file replace both.
+asins:
+  - B0DLVGWRVJ
+asins_file: asins.txt
+
+max_pages: 5            # review pages per ASIN (10 reviews each)
+since: null             # e.g. 2026-01-01 -> stop at reviews older than this
+incremental: true       # stop at the first review already in reviews.db (--full disables)
+headful: false          # show the browser window (--headful)
+
+delay_seconds: [3, 8]   # random pause between page loads; requests are sequential
+retries: 3              # per page, exponential backoff on timeouts / 5xx
+page_timeout_seconds: 45
+
+# Login session lives here. Gitignored -- never commit it.
+profile_dir: .auth/browser-profile
+browser_executable_path: null   # set to use an installed Chrome instead of Playwright's Chromium
+
+db_path: reviews.db
+latest_csv: reviews_latest.csv
+exports_dir: exports    # new_reviews_YYYYMMDD_HHMM.csv per run
+
+log_file: scraper.log
+
+# Tried in order on page 1; the first that shows reviews is used for pagination.
+# {base} = https://www.<marketplace>. Run --probe to see which one works for you.
+reviews_url_templates:
+  - "{base}/product-reviews/{asin}/?ie=UTF8&reviewerType=all_reviews&sortBy=recent&pageNumber={page}&language=en_IN"
+  - "{base}/portal/customer-reviews/{asin}/?_encoding=UTF8&ie=UTF8&reviewerType=all_reviews&sortBy=recent&pageNumber={page}&language=en_IN"
+
+# Optional: append each run's new reviews to a Google Sheet (needs: pip install gspread).
+google_sheets:
+  enabled: false
+  service_account_file: .auth/google-service-account.json
+  spreadsheet_id: ""
+  worksheet: new_reviews

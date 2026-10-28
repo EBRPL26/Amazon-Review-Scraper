@@ -1,0 +1,2 @@
+# One ASIN (or product URL) per line. Lines starting with # are ignored.
+# B0DLVGWRVJ is already listed in config.yaml; add your other products here.
